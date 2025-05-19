@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import FeatureBox from './FeatureBox';
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="text-center">
       {/* Landing Content */}
@@ -26,6 +29,14 @@ const LandingPage = () => {
             description="Perfect for young professionals starting their investment journey. Get personalized guidance for your first steps in financial planning."
             buttonColor="green"
             imageSrc="https://media.istockphoto.com/id/1045368942/vector/abstract-green-leaf-logo-icon-vector-design-ecology-icon-set-eco-icon.jpg?s=612x612&w=0&k=20&c=XIfHMI8r1G73blCpCBFmLIxCtOLx8qX0O3mZC9csRLs="
+          extraButton={
+              <button
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                onClick={() => navigate('/fresh-investor')}
+              >
+                Start Analysis
+              </button>
+            }
           />
         </div>
         <div className="flex justify-center">
@@ -34,6 +45,14 @@ const LandingPage = () => {
             description="Perfect for young professionals starting their investment journey. Get personalized guidance for your first steps in financial planning."
             buttonColor="purple"
             imageSrc="https://img.favpng.com/17/2/19/purple-heart-day-purple-heart-symbol-illustration-rrsJ4Yzk_t.jpg"
+          extraButton={
+              <button
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                onClick={() => navigate('/newly-married')}
+              >
+                Start Analysis
+              </button>
+            }
           />
         </div>
         <div className="flex justify-center">
@@ -42,6 +61,15 @@ const LandingPage = () => {
             description="Perfect for young professionals starting their investment journey. Get personalized guidance for your first steps in financial planning."
             buttonColor="lightblue"
             imageSrc="https://cdn-icons-png.flaticon.com/512/718/718339.png"
+            extraButton={
+              <button
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                onClick={() => navigate('/joint-family')}
+              >
+                Start Analysis
+              </button>
+            }
+
           />
         </div>
         <div className="flex justify-center">
@@ -50,6 +78,14 @@ const LandingPage = () => {
             description="Perfect for young professionals starting their investment journey. Get personalized guidance for your first steps in financial planning."
             buttonColor="orange"
             imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFKSc9fIjFIzziV9z9UfVmUpCrfxEx1wJs0Q&s"
+               extraButton={
+               <button
+                 className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                   onClick={() => navigate('/senior-citizen')}
+                 >
+                Start Analysis
+                     </button>
+               }
           />
         </div>
       </div>
